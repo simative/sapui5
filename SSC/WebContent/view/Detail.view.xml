@@ -1,0 +1,67 @@
+<mvc:View controllerName="sap.ui.mock.ssc.view.Detail"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Page showNavButton="{device>/isPhone}" navButtonPress="onNavBack"
+		class="sapUiFioriObjectPage" title="{i18n>detailTitle}">
+		<content>
+			<ObjectHeader title="Program: {program}" number="Date Send: {date}"
+				numberUnit="Created On: {createdOn}">
+				<attributes>
+					<ObjectAttribute text="{i18n>detailForm} {
+						path: 'form'
+						}"
+						/>
+
+				</attributes>
+			</ObjectHeader>
+			<IconTabBar select="onDetailSelect" id="idIconTabBar">
+				<items>
+					<IconTabFilter key="attachment" text="{i18n>iconTabFilterAttachment}"
+						icon="sap-icon://attachment">
+						<content>
+							<List id="oAttachmentList" headerText="List of Attachments">
+								<CustomListItem>
+									<HBox>
+										<core:Icon size="1rem" src="sap-icon://pdf-attachment"
+											class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+										<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+											<Link text="Attachment 1" target="_blank"
+												href="http://www.cbu.edu.zm/downloads/pdf-sample.pdf" />
+										</VBox>
+									</HBox>
+								</CustomListItem>
+								<CustomListItem>
+									<HBox>
+										<core:Icon size="1rem" src="sap-icon://pdf-attachment"
+											class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+										<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+											<Link text="Attachment 2" target="_blank"
+												href="http://www.cbu.edu.zm/downloads/pdf-sample.pdf" />
+										</VBox>
+									</HBox>
+								</CustomListItem>
+								<CustomListItem>
+									<HBox>
+										<core:Icon size="1rem" src="sap-icon://pdf-attachment"
+											class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+										<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+											<Link text="Attachment 3" target="_blank"
+												href="http://www.cbu.edu.zm/downloads/pdf-sample.pdf" />
+										</VBox>
+									</HBox>
+								</CustomListItem>
+							</List>
+						</content>
+					</IconTabFilter>
+
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button text="Download" type="Emphasized" icon="sap-icon://download"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

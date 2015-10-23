@@ -1,0 +1,42 @@
+<!-- HTML5 document type declaration -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<!--Tell Internet Explorer to use the newest rendering mode, not to use Compatibility mode for UI5 desktop application -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- the character set used in the app is UTF8 -->
+<meta charset="UTF-8">
+
+<title>Self Service Certificates</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src = "resources/sap-ui-core.js"
+	id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.m" 
+	data-sap-ui-theme="sap_bluecrystal"
+	data-sap-ui-xx-bindingSyntax="complex"
+	data-sap-ui-resourceroots='{
+            "sap.ui.mock.ssc": "./"
+        }'>
+</script>
+
+<!-- Once the UI5 core has been loaded in the bootstrap, start the application on the Init event via sap.ui.getCore().attachInit -->
+<script>
+//Initiate an sap.ui.core.ComponentContainer and place it inside an sap.m.Shell
+//The ComponentContainer is a SAPUI5 control that contains a component
+//Container will look for "Component" in the name space specified in the name attribure of ComponentContainer which is sap.ui.demo.tdg
+
+	sap.ui.getCore().attachInit(function() {
+		new sap.m.Shell({
+			app : new sap.ui.core.ComponentContainer({
+				height : "100%",
+				name : "sap.ui.mock.ssc"
+			})
+		}).placeAt("content");
+	});
+</script>
+</head>
+
+<body class="sapUiBody" id="content" />
+
+</html>
